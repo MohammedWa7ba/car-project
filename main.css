@@ -1,0 +1,516 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+::-moz-selection {
+  background-color: #fff;
+  color: red;
+}
+
+::selection {
+  background-color: #fff;
+  color: red;
+}
+
+nav {
+  border-bottom: 1px solid #303a44;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+}
+nav ul a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  padding: 20px;
+}
+nav ul a:hover {
+  color: #f00;
+  transition: all 1s ease;
+}
+nav ul a:hover .app {
+  display: block;
+}
+nav h3 {
+  color: red;
+}
+
+.socail ul {
+  display: flex;
+  list-style: none;
+  justify-content: start;
+  margin-top: 25px;
+  position: absolute;
+  bottom: 72px;
+}
+.socail ul li {
+  margin: 10px;
+}
+.socail ul a {
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 99em;
+  padding: 15px;
+  text-decoration: none;
+  align-items: center;
+  display: flex;
+}
+.socail ul a svg {
+  fill: #fff;
+  width: 20px;
+}
+.socail ul a:hover {
+  transition: all 1s ease;
+  background: #000;
+}
+.socail ul a:hover svg {
+  transition: all 0.9s ease;
+  fill: red;
+}
+
+.app-bg {
+  color: #fff;
+  padding-top: 200px;
+  padding-bottom: 100px;
+}
+.app-bg ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.app-bg h2 {
+  color: #fff;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.15em;
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  animation: typing 3s steps(30, end), blink-caret 0.5s step-end infinite;
+}
+.app-bg p {
+  font-size: 18px;
+  color: #fff;
+  position: relative;
+  animation-name: blinkcolor;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+.app-bg p:hover {
+  animation-play-state: paused;
+}
+.app-bg p::after {
+  content: "\f177";
+  font-family: fontawesome;
+  position: absolute;
+  right: 0%;
+  animation-name: moveright;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+.app-bg a {
+  text-decoration: none;
+  color: #fff;
+}
+.app-bg a:hover {
+  color: #f00;
+}
+.app img {
+  width: 100%;
+}
+.app-bottom {
+  background: #fff;
+  padding: 25px;
+  border-radius: 22px;
+}
+.app nav {
+  border: none;
+}
+.app .nav-link.active {
+  box-shadow: 0 0.25rem 0.5625rem -0.0625rem rgba(12, 8, 0, 0.03), 0 0.275rem 1.25rem -0.0625rem rgba(12, 8, 0, 0.05) !important;
+  color: #fc0012 !important;
+  border: none !important;
+}
+.app label {
+  color: #000;
+  margin-bottom: 10px;
+}
+.app button {
+  border: none;
+  color: #000;
+}
+.app button:hover {
+  border: none !important;
+  color: #000;
+}
+.app .btn {
+  width: 100%;
+  margin-top: 35px;
+  background-color: #000;
+  color: #fff;
+}
+.app .btn:hover {
+  background-color: red;
+  color: #fff;
+  animation-name: hover-buzz;
+  animation-duration: 0.75s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+@media (max-width: 768px) {
+  .app .app-bg {
+    padding-top: 130px;
+  }
+  .app h2 {
+    font-size: 25px;
+  }
+  .app p {
+    font-size: 16px;
+  }
+}
+
+.about {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+.about img {
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .about {
+    padding-top: 30px;
+  }
+}
+
+.fql {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  /* hide the default arrow */
+  /* general styles */
+  /* open state */
+}
+.fql h2 {
+  font-size: 40px;
+  font-weight: 700;
+}
+.fql details > summary {
+  list-style: none;
+}
+.fql details summary::-webkit-details-marker {
+  display: none;
+}
+.fql details {
+  margin-bottom: 12px;
+  border-radius: 8px;
+}
+.fql summary {
+  background-color: rgba(255, 0, 0, 0.485);
+  color: #fff;
+  padding: 1rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  cursor: pointer;
+  border-top-left-radius: 24px;
+  border-bottom-right-radius: 24px;
+}
+.fql .icon svg {
+  transition: all 0.35s ease-out;
+}
+.fql details > div {
+  background-color: rgba(255, 0, 0, 0.109);
+  padding: 1rem 2rem;
+}
+.fql details[open] summary {
+  border-bottom-right-radius: unset;
+}
+.fql details[open] > div {
+  border-bottom-right-radius: 24px;
+}
+.fql details[open] .icon svg {
+  transform: rotateX(180deg);
+}
+.fql img {
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .fql {
+    padding-top: 0px;
+  }
+  .fql h2 {
+    font-size: 25px;
+  }
+}
+
+.WhyChoose {
+  padding-top: 30px;
+  padding-bottom: 70px;
+}
+.WhyChoose h2 {
+  font-size: 40px;
+  font-weight: bold;
+}
+.WhyChoose .card {
+  border: none;
+  height: 430px;
+  box-shadow: 0 0.25rem 0.5625rem -0.0625rem rgba(12, 8, 0, 0.03), 0 0.275rem 1.25rem -0.0625rem rgba(12, 8, 0, 0.05);
+  padding: 10px;
+}
+.WhyChoose .card img {
+  width: 100%;
+  transform: scale(1);
+  transition: 0.3s ease-in-out;
+}
+.WhyChoose .card-header {
+  background: none;
+  border: navajowhite;
+}
+.WhyChoose .card a {
+  color: red;
+  text-decoration: none;
+  font-size: 15px;
+}
+.WhyChoose .card p {
+  font-size: 16px;
+  font-weight: 500;
+}
+.WhyChoose .card .btn {
+  border: 1px solid;
+}
+.WhyChoose .card:hover .btn {
+  background-color: red;
+  border: none;
+  transition: all 2s ease;
+}
+.WhyChoose .card:hover .btn a {
+  color: #fff;
+}
+.WhyChoose .card:hover img {
+  transform: scale(1.1);
+}
+@media (max-width: 768px) {
+  .WhyChoose {
+    padding-top: 0px;
+  }
+  .WhyChoose h2 {
+    font-size: 25px;
+  }
+}
+
+.contact {
+  padding-bottom: 70px;
+}
+.contact h2 {
+  font-size: 40px;
+  font-weight: bold;
+}
+.contact .btn {
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  border: none;
+}
+.contact .btn:hover {
+  background-color: red;
+  color: #fff;
+  animation-name: hover-buzz;
+  animation-duration: 0.75s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+@media (max-width: 768px) {
+  .contact {
+    padding-top: 0px;
+  }
+  .contact h2 {
+    font-size: 25px;
+  }
+}
+
+footer {
+  color: #fff;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  /* Responsive adjustments */
+}
+footer .row {
+  display: flex;
+  padding: 1rem;
+}
+@media (max-width: 768px) {
+  footer h2 {
+    font-size: 25px;
+  }
+}
+footer h4 {
+  margin-bottom: 0.9375rem;
+  font-size: 25px;
+}
+footer p {
+  font-size: 1rem;
+  line-height: 1.3rem;
+}
+footer ul {
+  list-style: none;
+  margin-top: -30px;
+  padding: 0;
+}
+footer ul li {
+  margin-bottom: 0.625rem;
+}
+footer ul li a {
+  color: #fff;
+  font-size: 1rem;
+}
+footer ul li i {
+  color: red;
+  margin-right: 0px;
+}
+footer ul li a:hover {
+  color: red;
+}
+footer ul.social-icons {
+  display: flex;
+  -moz-column-gap: 0.625rem;
+       column-gap: 0.625rem;
+  margin-top: 20px;
+}
+footer .social-icons i {
+  color: red;
+}
+footer ul.social-icons li {
+  margin-bottom: 0rem;
+}
+footer ul.social-icons li a {
+  display: grid;
+  place-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 100%;
+  background-color: #fff;
+}
+footer ul.social-icons li:hover a {
+  background-color: red;
+  transition: all 1s ease;
+}
+footer ul.social-icons li:hover a i {
+  color: #fff;
+}
+footer a {
+  text-decoration: none;
+}
+@media screen and (max-width: 768px) {
+  footer .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  footer h4 {
+    font-size: 1.3125rem;
+  }
+  footer p {
+    font-size: 0.9375rem;
+  }
+  footer ul {
+    margin-top: 0;
+  }
+  footer .ul {
+    justify-content: start !important;
+  }
+  footer ul li a {
+    font-size: 0.9375rem;
+  }
+  footer ul.social-icons li a {
+    width: 1.875rem;
+    height: 1.875rem;
+  }
+}
+
+@keyframes hover-buzz {
+  10% {
+    transform: translateX(3px) rotate(2deg);
+  }
+  20% {
+    transform: translateX(-3px) rotate(-2deg);
+  }
+  30% {
+    transform: translateX(3px) rotate(2deg);
+  }
+  40% {
+    transform: translateX(-3px) rotate(-2deg);
+  }
+  50% {
+    transform: translateX(2px) rotate(1deg);
+  }
+  60% {
+    transform: translateX(-2px) rotate(-1deg);
+  }
+  70% {
+    transform: translateX(2px) rotate(1deg);
+  }
+  80% {
+    transform: translateX(-2px) rotate(-1deg);
+  }
+  90% {
+    transform: translateX(1px) rotate(0);
+  }
+  100% {
+    transform: translateX(-1px) rotate(0);
+  }
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
+@keyframes blinkcolor {
+  30% {
+    color: #f00;
+  }
+  70% {
+    color: #fff;
+  }
+  100% {
+    color: #f00;
+  }
+}
+@keyframes moveleft {
+  0% {
+    transform: translate(0px);
+  }
+  50% {
+    transform: translate(20px);
+  }
+  100% {
+    transform: translate(0px);
+  }
+}
+@keyframes moveright {
+  0% {
+    transform: translate(0px);
+  }
+  50% {
+    transform: translate(-20px);
+  }
+  100% {
+    transform: translate(0px);
+  }
+}

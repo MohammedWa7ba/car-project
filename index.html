@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cars</title>
+    <link rel="stylesheet" href="./main.css" />
+    <link rel="icon" type="image/x-icon" href="./img/fivicon.png" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="./img/1.png" alt="logo" />
+        </a>
+        <ul class="d-none d-lg-flex">
+          <li>
+            <a href=""> Home </a>
+          </li>
+          <li>
+            <a href="#about"> About </a>
+          </li>
+          <li>
+            <a href="#fql"> Fql </a>
+          </li>
+          <li>
+            <a href="#WhyChooseUs"> Why Choose Us</a>
+          </li>
+          <li>
+            <a href="#contact"> Contact </a>
+          </li>
+        </ul>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasDarkNavbar"
+          aria-controls="offcanvasDarkNavbar"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="offcanvas offcanvas-end text-bg-dark"
+          tabindex="-1"
+          id="offcanvasDarkNavbar"
+          aria-labelledby="offcanvasDarkNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <a class="navbar-brand" href="#">
+              <img src="./img/1.png" alt="logo" />
+            </a>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <div class="content mt-4 ps-4 d-none d-lg-block">
+                <h3>About</h3>
+                <p class="lh-md fs-6">
+                  Many car manufacturers have put their car purchase information
+                  on the internet. The trend was already evident before the
+                  outbreak of the corona crisis in 2020, with companies like
+                  Tesla and Carvana at the top. Against the background of
+                  lockdowns and contact restrictions, it picked up speed - and
+                  will certainly continue in a world after Corona. Rhett Ricart,
+                  chairman of the US National Auto Dealers Association (NADA),
+                  told mobility magazine Car and Driver that he assumes that 80
+                  to 90% of automobile dealers will have e-cars by the end of
+                  2021
+                </p>
+              </div>
+              <div class="d-block d-lg-none">
+                <li class="mt-3">
+                  <a href=""> Home </a>
+                </li>
+                <li class="mt-3">
+                  <a href="#about"> About </a>
+                </li>
+                <li class="mt-3">
+                  <a href="#fql"> Fql </a>
+                </li>
+                <li class="mt-3">
+                  <a href="#WhyChooseUs"> Why Choose Us</a>
+                </li>
+                <li class="mt-3">
+                  <a href="#contact"> Contact </a>
+                </li>
+              </div>
+              <div class="socail">
+                <ul>
+                  <li>
+                    <a href="">
+                      <svg
+                        viewBox="0 0 33 32"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M29.8327 16.0807C29.8327 8.67184 23.8638 2.6665 16.4993 2.6665C9.13491 2.6665 3.16602 8.67184 3.16602 16.0807C3.16602 22.7776 8.04068 28.327 14.4158 29.3332V19.959H11.0309V16.0798H14.4158V13.1252C14.4158 9.76339 16.406 7.90562 19.4522 7.90562C20.91 7.90562 22.4371 8.16784 22.4371 8.16784V11.4692H20.7545C19.0985 11.4692 18.5829 12.5038 18.5829 13.5652V16.0807H22.2807L21.6896 19.9581H18.5829V29.3332C24.958 28.327 29.8327 22.7776 29.8327 16.0807Z"
+                        />
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <svg
+                        viewBox="0 0 33 32"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M16.5002 11.6666C14.107 11.6666 12.1669 13.6067 12.1669 15.9999C12.1669 18.3931 14.107 20.3332 16.5002 20.3332C18.8935 20.3332 20.8336 18.3931 20.8336 15.9999C20.8336 13.6067 18.8935 11.6666 16.5002 11.6666Z"
+                        />
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M9.52629 4.10852C14.1238 3.59469 18.8767 3.59469 23.4742 4.10852C26.0054 4.39142 28.047 6.38579 28.3441 8.92586C28.8938 13.6259 28.8938 18.3739 28.3441 23.0739C28.047 25.614 26.0054 27.6084 23.4742 27.8913C18.8767 28.4051 14.1238 28.4051 9.5263 27.8913C6.9951 27.6084 4.95351 25.614 4.65642 23.0739C4.10671 18.3739 4.10671 13.6259 4.65642 8.92586C4.95351 6.38579 6.9951 4.39142 9.52629 4.10852ZM23.1669 7.9999C22.4305 7.9999 21.8336 8.59685 21.8336 9.33323C21.8336 10.0696 22.4305 10.6666 23.1669 10.6666C23.9033 10.6666 24.5002 10.0696 24.5002 9.33323C24.5002 8.59685 23.9033 7.9999 23.1669 7.9999ZM10.1669 15.9999C10.1669 12.5021 13.0024 9.66657 16.5002 9.66657C19.998 9.66657 22.8336 12.5021 22.8336 15.9999C22.8336 19.4977 19.998 22.3332 16.5002 22.3332C13.0024 22.3332 10.1669 19.4977 10.1669 15.9999Z"
+                        />
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="tel:01000000000" target="_blank">
+                      <svg
+                        viewBox="0 0 23 23"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M1.16738 9.14754C3.72258 14.7127 8.26925 19.1374 13.922 21.5361L14.8281 21.9398C16.9012 22.8634 19.3382 22.1617 20.6026 20.2771L21.7867 18.5121C22.1717 17.9383 22.0545 17.1654 21.5167 16.7315L17.5009 13.4918C16.9111 13.0159 16.0437 13.1268 15.5925 13.7357L14.3502 15.412C11.1624 13.8396 8.57437 11.2515 7.00191 8.06374L8.67824 6.82144C9.28713 6.37021 9.39796 5.50286 8.92211 4.91302L5.68228 0.897093C5.24849 0.359385 4.47582 0.242095 3.902 0.626853L2.12488 1.81845C0.228417 3.09006 -0.469424 5.54719 0.475552 7.62579L1.16634 9.14528L1.16738 9.14754Z"
+                        />
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="mailto:car@car.com" target="_blank">
+                      <svg
+                        viewBox="0 0 25 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M6.21932 0.543484C10.3988 0.180167 14.602 0.180167 18.7815 0.543484L20.7952 0.718527C22.1357 0.835053 23.2837 1.63461 23.8786 2.77831C23.9547 2.92463 23.8977 3.10178 23.7574 3.18859L15.4028 8.36049C13.611 9.46971 11.3517 9.49299 9.53736 8.42091L1.12693 3.4511C0.991048 3.37081 0.928677 3.20553 0.989914 3.06006C1.53412 1.7673 2.75763 0.844402 4.20567 0.718527L6.21932 0.543484Z"
+                        />
+                        <path
+                          d="M0.98307 5.68917C0.775119 5.56629 0.509781 5.69853 0.485541 5.93885C0.147227 9.29303 0.229109 12.679 0.731185 16.0178C0.99587 17.7779 2.43241 19.1273 4.20567 19.2815L6.21932 19.4565C10.3988 19.8198 14.602 19.8198 18.7815 19.4565L20.7952 19.2815C22.5684 19.1273 24.005 17.7779 24.2697 16.0178C24.7864 12.5817 24.858 9.09565 24.4847 5.6457C24.4585 5.40368 24.1886 5.27388 23.9816 5.40201L16.4555 10.061C14.0313 11.5617 10.9745 11.5932 8.51991 10.1428L0.98307 5.68917Z"
+                        />
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section class="app">
+      <div class="app-bg bg-dark">
+        <div class="container">
+          <div class="row align-items-center d-flex">
+            <div class="col-lg-6 col-md-6">
+              <div class="content">
+                <h2>Lamborghini Aventador</h2>
+
+                <p>
+                  Distinctively optimize web-enabled materials with functional
+                  markets. intellectual capital with applications.
+                </p>
+                <ul>
+                  <li>
+                    <i class="fa-regular fa-circle-check"></i>
+                    <span> Leather Seats </span>
+                  </li>
+                  <li>
+                    <i class="fa-regular fa-circle-check"></i>
+                    <span> Sunroof / moonroof </span>
+                  </li>
+                  <li>
+                    <i class="fa-regular fa-circle-check"></i>
+                    <span> Heated Seats </span>
+                  </li>
+                </ul>
+                <a href="" class="d-sm-none d-flex">
+                  <svg
+                    width="49"
+                    height="28"
+                    viewBox="0 0 49 28"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M42.5 9L47.715 14.1189M47.715 14.1189L42.5 19.3339M47.715 14.1189H19.5"
+                      stroke="#FC0012"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                    <rect
+                      x="1"
+                      y="1"
+                      width="32"
+                      height="26"
+                      rx="13"
+                      stroke="#FC0012"
+                      stroke-width="2"
+                    ></rect>
+                  </svg>
+                  <span>Explore More</span>
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6">
+              <img src="./img/2.png" alt="car" />
+            </div>
+          </div>
+          <div class="app-bottom mt-5">
+            <nav>
+              <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                <button
+                  class="nav-link active"
+                  id="nav-home-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#nav-home"
+                  type="button"
+                  role="tab"
+                  aria-controls="nav-home"
+                  aria-selected="true"
+                >
+                  All Status
+                </button>
+                <button
+                  class="nav-link"
+                  id="nav-profile-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#nav-profile"
+                  type="button"
+                  role="tab"
+                  aria-controls="nav-profile"
+                  aria-selected="false"
+                >
+                  New Car
+                </button>
+                <button
+                  class="nav-link"
+                  id="nav-contact-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#nav-contact"
+                  type="button"
+                  role="tab"
+                  aria-controls="nav-contact"
+                  aria-selected="false"
+                >
+                  Used Car
+                </button>
+              </div>
+            </nav>
+            <div class="tab-content mt-4" id="nav-tabContent">
+              <div
+                class="tab-pane fade show active"
+                id="nav-home"
+                role="tabpanel"
+                aria-labelledby="nav-home-tab"
+                tabindex="0"
+              >
+                <form class="row g-3 needs-validation" novalidate>
+                  <div class="col-lg-3 col-md-6">
+                    <label for="Brand Name">Brand Name</label>
+                    <select
+                      class="form-select"
+                      aria-label="Default select example"
+                    >
+                      <option selected>Marcediz Benz</option>
+                      <option value="1">Volkswagen</option>
+                      <option value="2">Hyundai</option>
+                      <option value="3">Ferrari</option>
+                    </select>
+                  </div>
+                  <div class="col-lg-2 col-md-6">
+                    <label for="Brand Name">Select Type</label>
+                    <select
+                      class="form-select"
+                      aria-label="Default select example"
+                    >
+                      <option selected>SUV</option>
+                      <option value="1">Sedan</option>
+                      <option value="2">Wagon</option>
+                      <option value="3">Coup</option>
+                    </select>
+                  </div>
+                  <div class="col-lg-3 col-md-6">
+                    <label for="Brand Name">Select Models</label>
+                    <select
+                      class="form-select"
+                      aria-label="Default select example"
+                    >
+                      <option selected>Brooklands</option>
+                      <option value="1">Mazda MX Miata</option>
+                      <option value="2">Ferrari F12 TRS</option>
+                      <option value="3">Mercedes-Benz E 400</option>
+                    </select>
+                  </div>
+                  <div class="col-lg-3 col-md-6">
+                    <label for="Brand Name">Transmission</label>
+                    <select
+                      class="form-select"
+                      aria-label="Default select example"
+                    >
+                      <option selected>Semi Automatic</option>
+                      <option value="1">Automatic</option>
+                      <option value="2">Two</option>
+                      <option value="3">Manual</option>
+                    </select>
+                  </div>
+                  <div class="col-lg-1 col-md-4">
+                    <button class="btn btn-primary" type="submit">
+                      Search
+                    </button>
+                  </div>
+                </form>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="nav-profile"
+                role="tabpanel"
+                aria-labelledby="nav-profile-tab"
+                tabindex="0"
+              >
+                <form class="row g-3 needs-validation" novalidate>
+                  <div class="col-md-3">
+                    <label for="Brand Name">Brand Name</label>
+                    <select
+                      class="form-select"
+                      aria-label="Default select example"
+                    >
+                      <option selected>Marcediz Benz</option>
+                      <option value="1">Volkswagen</option>
+                      <option value="2">Hyundai</option>
+                      <option value="3">Ferrari</option>
+                    </select>
+                  </div>
+                  <div class="col-md-2">
+                    <label for="Brand Name">Select Type</label>
+                    <select
+                      class="form-select"
+                      aria-label="Default select example"
+                    >
+                      <option selected>SUV</option>
+                      <option value="1">Sedan</option>
+                      <option value="2">Wagon</option>
+                      <option value="3">Coup</option>
+                    </select>
+                  </div>
+                  <div class="col-md-3">
+                    <label for="Brand Name">Select Models</label>
+                    <select
+                      class="form-select"
+                      aria-label="Default select example"
+                    >
+                      <option selected>Brooklands</option>
+                      <option value="1">Mazda MX Miata</option>
+                      <option value="2">Ferrari F12 TRS</option>
+                      <option value="3">Mercedes-Benz E 400</option>
+                    </select>
+                  </div>
+                  <div class="col-md-3">
+                    <label for="Brand Name">Transmission</label>
+                    <select
+                      class="form-select"
+                      aria-label="Default select example"
+                    >
+                      <option selected>Semi Automatic</option>
+                      <option value="1">Automatic</option>
+                      <option value="2">Two</option>
+                      <option value="3">Manual</option>
+                    </select>
+                  </div>
+                  <div class="col-md-1">
+                    <button class="btn btn-primary" type="submit">
+                      Search
+                    </button>
+                  </div>
+                </form>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="nav-contact"
+                role="tabpanel"
+                aria-labelledby="nav-contact-tab"
+                tabindex="0"
+              >
+                <form class="row g-3 needs-validation" novalidate>
+                  <div class="col-md-3">
+                    <label for="Brand Name">Brand Name</label>
+                    <select
+                      class="form-select"
+                      aria-label="Default select example"
+                    >
+                      <option selected>Marcediz Benz</option>
+                      <option value="1">Volkswagen</option>
+                      <option value="2">Hyundai</option>
+                      <option value="3">Ferrari</option>
+                    </select>
+                  </div>
+                  <div class="col-md-2">
+                    <label for="Brand Name">Select Type</label>
+                    <select
+                      class="form-select"
+                      aria-label="Default select example"
+                    >
+                      <option selected>SUV</option>
+                      <option value="1">Sedan</option>
+                      <option value="2">Wagon</option>
+                      <option value="3">Coup</option>
+                    </select>
+                  </div>
+                  <div class="col-md-3">
+                    <label for="Brand Name">Select Models</label>
+                    <select
+                      class="form-select"
+                      aria-label="Default select example"
+                    >
+                      <option selected>Brooklands</option>
+                      <option value="1">Mazda MX Miata</option>
+                      <option value="2">Ferrari F12 TRS</option>
+                      <option value="3">Mercedes-Benz E 400</option>
+                    </select>
+                  </div>
+                  <div class="col-md-3">
+                    <label for="Brand Name">Transmission</label>
+                    <select
+                      class="form-select"
+                      aria-label="Default select example"
+                    >
+                      <option selected>Semi Automatic</option>
+                      <option value="1">Automatic</option>
+                      <option value="2">Two</option>
+                      <option value="3">Manual</option>
+                    </select>
+                  </div>
+                  <div class="col-md-1">
+                    <button class="btn btn-primary" type="submit">
+                      Search
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="about" id="about">
+      <div class="container">
+        <div class="row align-items-center d-flex">
+          <div class="col-lg-6">
+            <h2>About Us</h2>
+            <p>
+              Many car manufacturers have put their car purchase information on
+              the internet. The trend was already evident before the outbreak of
+              the corona crisis in 2020, with companies like Tesla and Carvana
+              at the top. Against the background of lockdowns and contact
+              restrictions, it picked up speed - and will certainly continue in
+              a world after Corona. Rhett Ricart, chairman of the US National
+              Auto Dealers Association (NADA), told mobility magazine Car and
+              Driver that he assumes that 80 to 90% of automobile dealers will
+              have e-cars by the end of 2021
+            </p>
+          </div>
+          <div class="col-lg-6 col-md-6">
+            <img src="./img/4.jpg" alt="Car" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="fql" id="fql">
+      <div class="container">
+        <h2 class="text-center">Frequently Ask Question</h2>
+
+        <div class="row mt-5 align-items-center d-flex">
+          <div class="col-lg-6 col-md-6">
+            <details>
+              <summary>
+                <span>01 How long does it take to inspect your car?</span>
+                <span class="icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="14"
+                    height="9"
+                    viewBox="0 0 14 9"
+                    fill="none"
+                  >
+                    <path
+                      d="M1 1L7 7L13 1"
+                      stroke="#EBE8F0"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </span>
+              </summary>
+              <div>
+                <div>
+                  Dynamically reintermediate virtual functionalities for
+                  bandwidth. Uniquely expedite cooperative strategic theme areas
+                  and sticky e-markets. Holisticly synergize alternative metrics
+                  for multifunctional outsourcing without ubiquitous total
+                  linkage.
+                </div>
+              </div>
+            </details>
+            <div>
+              <details>
+                <summary>
+                  <span>02 Will dealers let you take car mechanic?</span>
+                  <span class="icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="14"
+                      height="9"
+                      viewBox="0 0 14 9"
+                      fill="none"
+                    >
+                      <path
+                        d="M1 1L7 7L13 1"
+                        stroke="#EBE8F0"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                      />
+                    </svg>
+                  </span>
+                </summary>
+                <div>
+                  <div>
+                    Dynamically reintermediate virtual functionalities for
+                    bandwidth. Uniquely expedite cooperative strategic theme
+                    areas and sticky e-markets. Holisticly synergize alternative
+                    metrics for multifunctional outsourcing without ubiquitous
+                    total linkage.
+                  </div>
+                </div>
+              </details>
+            </div>
+            <div>
+              <details>
+                <summary>
+                  <span
+                    >03 How long does it take a mechanic to inspect a used
+                    car?</span
+                  >
+                  <span class="icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="14"
+                      height="9"
+                      viewBox="0 0 14 9"
+                      fill="none"
+                    >
+                      <path
+                        d="M1 1L7 7L13 1"
+                        stroke="#EBE8F0"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                      />
+                    </svg>
+                  </span>
+                </summary>
+                <div>
+                  <div>
+                    Dynamically reintermediate virtual functionalities for
+                    bandwidth. Uniquely expedite cooperative strategic theme
+                    areas and sticky e-markets. Holisticly synergize alternative
+                    metrics for multifunctional outsourcing without ubiquitous
+                    total linkage.
+                  </div>
+                </div>
+              </details>
+            </div>
+            <div>
+              <details>
+                <summary>
+                  <span
+                    >04 How long does it take a mechanic to inspect a used
+                    car?</span
+                  >
+                  <span class="icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="14"
+                      height="9"
+                      viewBox="0 0 14 9"
+                      fill="none"
+                    >
+                      <path
+                        d="M1 1L7 7L13 1"
+                        stroke="#EBE8F0"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                      />
+                    </svg>
+                  </span>
+                </summary>
+                <div>
+                  <div>
+                    Dynamically reintermediate virtual functionalities for
+                    bandwidth. Uniquely expedite cooperative strategic theme
+                    areas and sticky e-markets. Holisticly synergize alternative
+                    metrics for multifunctional outsourcing without ubiquitous
+                    total linkage.
+                  </div>
+                </div>
+              </details>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6">
+            <img src="./img/3.png" alt="car" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="WhyChoose" id="WhyChooseUs">
+      <div class="container">
+        <h2 class="text-center">Find the Best Deals For You</h2>
+        <div class="row mt-4">
+          <div class="col-lg-3 col-md-6 mt-3">
+            <div class="card">
+              <div class="card-header">
+                <img src="./img/5.jpg" alt="" />
+              </div>
+              <div class="card-body">
+                <h5>Mercedes-Benz E 400</h5>
+                <div class="d-flex">
+                  <p>Listed by:</p>
+                  <a href="">Car House</a>
+                </div>
+                <span>
+                  <b>price</b>
+                  <small>$174,900 </small>
+                </span>
+              </div>
+              <div class="btn">
+                <a href="">View Details</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 mt-3">
+            <div class="card">
+              <div class="card-header">
+                <img src="./img/6.jpg" alt="" />
+              </div>
+              <div class="card-body">
+                <h5>BMW 640 XI Gran Turismo</h5>
+                <div class="d-flex">
+                  <p>Listed by:</p>
+                  <a href="">Car House</a>
+                </div>
+                <span>
+                  <b>price</b>
+                  <small>$174,900</small>
+                </span>
+              </div>
+              <div class="btn">
+                <a href="">View Details</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 mt-3">
+            <div class="card">
+              <div class="card-header">
+                <img src="./img/7.jpg" alt="" />
+              </div>
+              <div class="card-body">
+                <h5>Ford Explorer XLT</h5>
+                <div class="d-flex">
+                  <p>Listed by:</p>
+                  <a href="">Car House</a>
+                </div>
+                <span>
+                  <b>price</b>
+                  <small>$174,900</small>
+                </span>
+              </div>
+              <div class="btn">
+                <a href="">View Details</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 mt-3">
+            <div class="card">
+              <div class="card-header">
+                <img src="./img/8.jpg" alt="" />
+              </div>
+              <div class="card-body">
+                <h5>Mercedes-Benz</h5>
+                <div class="d-flex">
+                  <p>Listed by:</p>
+                  <a href="">Car House</a>
+                </div>
+                <span>
+                  <b>price</b>
+                  <small>$174,900 </small>
+                </span>
+              </div>
+              <div class="btn">
+                <a href="">View Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="contact" id="contact">
+      <div class="container">
+        <h2 class="text-center">Contact Us</h2>
+        <div class="row justify-content-center mt-4">
+          <div class="col-lg-7 col-md-12">
+            <form class="row g-3 needs-validation" novalidate>
+              <div class="col-md-6 position-relative">
+                <label for="validationTooltip01" class="form-label"
+                  >First name</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="validationTooltip01"
+                  placeholder="Enter Your First name"
+                  required
+                />
+              </div>
+              <div class="col-md-6 position-relative">
+                <label for="validationTooltip02" class="form-label"
+                  >Last name</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="validationTooltip02"
+                  placeholder="Enter Your Last name"
+                  required
+                />
+              </div>
+
+              <div class="col-md-12 position-relative">
+                <label for="validationTooltip03" class="form-label"
+                  >Email</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="validationTooltip03"
+                  placeholder="Enter Your Email"
+                  required
+                />
+              </div>
+              <div class="col-md-12 position-relative">
+                <label for="validationTooltip04" class="form-label"
+                  >Phone Number</label
+                >
+                <input
+                  type="number"
+                  class="form-control"
+                  id="validationTooltip04"
+                  placeholder="Enter Your Phone number"
+                  required
+                />
+              </div>
+              <div class="form-floating">
+                <textarea
+                  class="form-control"
+                  placeholder="Leave a comment here"
+                  id="floatingTextarea"
+                ></textarea>
+                <label for="floatingTextarea">Message</label>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                <button class="btn btn-primary" type="submit">
+                  Contact Us
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="bg-dark">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-6">
+            <h4>About Us</h4>
+
+            <p>
+              Many car manufacturers have put their car purchase information on
+              the internet. The trend was already evident before the outbreak of
+              the corona crisis in 2020, with companies like Tesla and Carvana
+              at the top. Against the background of lockdowns and contact
+              restrictions, it picked up speed - and will certainly continue in
+              a world after Corona. Rhett Ricart, chairman of the US National
+              Auto Dealers Association (NADA), told mobility magazine Car and
+              Driver that he assumes that 80 to 90% of automobile dealers will
+              have e-cars by the end of 2021
+            </p>
+          </div>
+
+          <div class="justify-content-center d-grid col-lg-4 col-md-6 ul">
+            <h4 class="mb-0">Quick Links</h4>
+
+            <ul>
+              <li>
+                <a href="#"><i class="fa fa-angle-right"></i> Home</a>
+              </li>
+
+              <li>
+                <a href="#about"><i class="fa fa-angle-right"></i> About</a>
+              </li>
+
+              <li>
+                <a href="#fql"><i class="fa fa-angle-right"></i> Fql</a>
+              </li>
+              <li>
+                <a href="#WhyChooseUs"
+                  ><i class="fa fa-angle-right"></i> Why Choose Us</a>
+              </li>
+              <li>
+                <a href="#contact"><i class="fa fa-angle-right"></i> Contact</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-12">
+            <h4>Connect with Us</h4>
+
+            <ul class="social-icons">
+              <li>
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+              </li>
+
+              <li>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              </li>
+
+              <li>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+              </li>
+
+              <li>
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
